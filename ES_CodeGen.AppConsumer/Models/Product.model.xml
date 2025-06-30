@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Class name="Product">
+	<Property name="Id" type="int" inEntity="true" inDTO="true" />
+	<Property name="Name" type="string" inEntity="true" inDTO="true" />
+	<Property name="CostPrice" type="decimal" inEntity="true" inDTO="false" />
+	<Property name="SalePrice" type="decimal" inEntity="true" inDTO="true" />
+</Class>
