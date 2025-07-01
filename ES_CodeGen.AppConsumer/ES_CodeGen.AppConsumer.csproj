@@ -1,25 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+        <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<AdditionalFiles Include="Models\Customer.model.xml">
-		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</AdditionalFiles>
-		<AdditionalFiles Include="Models\Product.model.xml">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</AdditionalFiles>
-	</ItemGroup>
+    <ItemGroup>
+        <AdditionalFiles Include="Models\Customer.model.xml"/>
+        <AdditionalFiles Include="Models\Product.model.xml"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ES_CodeGen.XmlModelGenerator\ES_CodeGen.XmlModelGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ItemGroup>
+        <Content Include="Models\Customer.model.xml">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Models\Product.model.xml">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
 
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\ES_CodeGen.XmlModelGenerator\ES_CodeGen.XmlModelGenerator.csproj"
+                          OutputItemType="Analyzer"
+                          ReferenceOutputAssembly="false"/>
+    </ItemGroup>
 
 </Project>

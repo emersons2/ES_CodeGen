@@ -2,6 +2,6 @@
 <Class name="Customer">
 	<Property name="Id" type="int" inEntity="true" inDTO="true" />
 	<Property name="Name" type="string" inEntity="true" inDTO="true" />
-	<Property name="BirthDate" type="DateTime" inEntity="true" inDTO="false" />
+	<Property name="BirthDate" type="DateTime" inEntity="false" inDTO="false" />
 	<Property name="Address" type="string" inEntity="true" inDTO="true" />
 </Class>
